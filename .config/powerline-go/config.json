@@ -1,0 +1,4 @@
+{
+	"modules": ["host", "ssh", "cwd", "perms", "git", "dotenv","root"],
+	"hostname-only-if-ssh": true
+}

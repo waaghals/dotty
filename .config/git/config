@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+        name = Waaghals
+	email = 458580+waaghals@users.noreply.github.com
+[core]
+	editor = vim
+	excludesfile = /home/waaghals/.gitignore
+[alias]
+	co = checkout
+	cm = commit
+	cp = cherry-pick
+	br = branch
+	me = merge
+	rb = rebase
+	st = status -sb
+	sm = submodule
+	branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	lol = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+[color]
+	ui = auto
+
+[pull]
+	rebase = true
