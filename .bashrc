@@ -116,31 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-function _update_ps1() {
-    PS1="$(/usr/local/bin/powerline -error $?)"
-
-    # Uncomment the following line to automatically clear errors after showing
-    # them once. This not only clears the error for powerline-go, but also for
-    # everything else you run in that shell. Don't enable this if you're not
-    # sure this is what you want.
-
-    set "?"
-}
-
-if [ "$TERM" != "linux" ] && [ -f "/usr/local/bin/powerline" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
-
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
-alias dotty='/usr/bin/git --git-dir=$HOME/.config/dotty/ --work-tree=$HOME'
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-export GOPATH="$XDG_DATA_HOME"/go
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export MINIKUBE_HOME="$XDG_DATA_HOME"/minikube
-export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
+# Source all scripts from ~/.config/.bashrc
+for f in $HOME/.config/.bashrc/*; do
+    . $f
+done
 

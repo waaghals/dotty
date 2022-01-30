@@ -1,0 +1,2 @@
+alias dotty='/usr/bin/git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotty/ --work-tree=$HOME'
+
