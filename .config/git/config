@@ -5,7 +5,7 @@
 	email = 458580+waaghals@users.noreply.github.com
 [core]
 	editor = vim
-	excludesfile = /home/waaghals/.gitignore
+	excludesFile = ~/.config/git/ignore
 [alias]
 	co = checkout
 	cm = commit
@@ -17,8 +17,8 @@
 	sm = submodule
 	branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	lol = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+        fap = fetch --all --prune
 [color]
 	ui = auto
-
 [pull]
 	rebase = true
