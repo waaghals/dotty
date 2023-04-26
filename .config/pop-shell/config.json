@@ -1,6 +1,9 @@
 {
-  "float": [],
+  "float": [
+    {
+      "class": "Paradox Launcher"
+    }
+  ],
   "skiptaskbarhidden": [],
   "log_on_focus": false
 }
-
