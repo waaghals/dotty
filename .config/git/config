@@ -4,7 +4,7 @@
         name = Waaghals
 	email = 458580+waaghals@users.noreply.github.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesFile = ~/.config/git/ignore
 [alias]
 	co = checkout
